@@ -1,0 +1,279 @@
+.main_container{
+  position: relative;
+}
+.main__body{
+    /* overflow: auto; */
+    height: 110vh;
+    width:100vw;
+    position:absolute;
+    bottom:-5%;
+    /* left:30%; */
+  
+}
+
+.notificationouterpart{
+    position: fixed;
+    color: white;
+    z-index: 3000;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: notification 4s linear;
+    background:black;
+    padding: .4rem 1.2rem;
+    border-radius: 100px;
+}
+.notificationouterpart h3{
+    color:white;
+    font-size: 1rem;
+
+}
+.middle{
+    width:100px;
+    /* position: absolute;
+    top: 5%; */
+    position: relative;
+    top:50px;
+    left:50%;
+    white-space: nowrap;
+    /* left: 50%; */
+    transform: translate(-70%,-50%);
+  }
+  .btnn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    font-family: "montserrat";
+    text-decoration: none;
+    /* margin: 30px 0; */
+    border: 2px solid #ff7675;
+    padding: 14px 40px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 5s all ease;
+  }
+  .btnn::before{
+    background: #ff7675;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  
+  .btn1::before{
+    width: 0%;
+    height: 100%;
+  }
+  
+  .btn1:hover::before{
+    width: 100%;
+  }
+  
+  
+  .btn2::before{
+    width: 100%;
+    height: 0%;
+  }
+  .btn2:hover::before{
+    height: 100%;
+  }
+  
+  .btn3::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .btn3:hover::before{
+    height: 380%;
+  }
+  
+  .btn4::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  .btn4:hover::before{
+    height: 380%;
+  }
+  @media screen and (max-width: 768px){
+    .main_container{
+     position: unset;
+    }
+    .main__body{
+      /* overflow: auto; */
+      height: 100vh;
+      width:100vw;
+      position:absolute;
+      bottom:-6%;
+      /* left:30%; */
+    
+  }
+  @media screen and (max-width: 500px){
+    .main_container{
+      position: unset;
+      max-height: 100vh !important;
+     }
+  }
+  .middle{
+    width:80px;
+    /* position: absolute;
+    top: 5%; */
+    position: relative;
+    top:35px;
+    left:52%;
+    white-space: nowrap;
+    /* left: 50%; */
+    transform: translate(-70%,-50%);
+  }
+  .btnn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    font-family: "montserrat";
+    text-decoration: none;
+    /* margin: 30px 0; */
+    border: 2px solid #ff7675;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 5s all ease;
+  }
+  .fullscreenChat{
+    position: absolute;
+    top:-45vh;
+    left:-7px;
+    height:100vh;
+    width: 102vw;
+    margin: 0px !important;
+    /* transition: all 2s;
+    transition-timing-function: ease; */
+  }
+   
+  }
+@keyframes notification{
+    0%{
+        top:0;
+        opacity: 0;
+        display:block;
+    }
+    60%{
+        opacity: 1;
+        top:15%;
+        display:block;
+    }
+    100%{
+        top: 15%;
+        opacity: 1;
+        display: none!important;
+    }
+}
+/* @keyframes myanimation
+{
+    0% {
+        width:98.91px;
+        animation-timing-function:ease;}
+    
+ 100% {
+       width:0;
+       animation-timing-function:ease
+      }
+} */
+.mybtn{
+    background-color: #5829BB;
+    border:2px solid #5829BB;
+    color:white;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+/* @keyframes myanimation
+{
+    0% {
+        width:98.91px;
+        border:2px solid #5829BB;
+        animation-timing-function:linear;}
+    
+ 100% {
+       width:0;
+       border:2px solid #5829BB;
+       animation-timing-function:linear;
+      }
+} */
+@-webkit-keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+@keyframes shake-bottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+.mybtn:hover{
+    
+    animation:  shake-bottom 0.5s;
+}
+
